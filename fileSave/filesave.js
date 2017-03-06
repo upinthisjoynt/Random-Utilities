@@ -1,6 +1,6 @@
 /**
  * Method used for file downloads.
- * @method        createBlob
+ * @method        fnFileSave
  * @property     {object}     oBlob         local blob object
  * @property     {function}     fnFileSave         Window blob
  * @property     {function}     fnIsIE         Method to check IE Version
