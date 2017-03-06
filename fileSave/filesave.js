@@ -48,7 +48,7 @@ var fnFileSave = function(context) {
     }
     /**
      * Method to create a file download from a blob
-     * @method        file
+     * @method        fnCreateFile
      * @param         {object}    oData                                         File configuration for the file download
      * @param         {object}     [oData.contentType = {type: 'octet/stream'}]     Content type for the file blob
      * @param         {string}     [oData.data = '']                             The string data to send to the file
