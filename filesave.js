@@ -1,5 +1,5 @@
 /**
- * Method contnstructor to handle creating of blobs.  Used for file downloads and webworkers, etc
+ * Method used for file downloads.
  * @method        createBlob
  * @property     {object}     oBlob         local blob object
  * @property     {function}     fnFileSave         Window blob
@@ -7,11 +7,8 @@
  * @returns       {object}    Returns a new web worker
  * @author         Addam Driver <addam@devcrapshoot.com>
  * @namespace     fnFileSave
- * @example       <caption>Create a New Worker From Text</caption>
- *  var myWebWorker = fnFileSave().worker({data: "javscript code here..."}); // returns a new webworker from the url passed in.
- *
- * <caption>Create a file to download from some text</caption>
- * fnFileSave().createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
+ * @example       <caption>Create a file to download from some text</caption>
+ * fnFileSave.createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
  */
 var fnFileSave = function(context) {
     context = context || window;
@@ -37,7 +34,7 @@ var fnFileSave = function(context) {
         // if IE 11
         if (nTrident > 0) {
             return fnReturnInfo(3, nRV);
-        }
+        } 
 
         // if IE Edge
         if (nEdge > 0) {
@@ -47,7 +44,7 @@ var fnFileSave = function(context) {
         return false;
     }()
     , fnEndsWith = function (sString, sEndsWith) {
-       return sString.slice(-sEndsWith.length) == sEndsWith;
+       return sString.slice(-sEndsWith.length) === sEndsWith;
     }
     /**
      * Method to create a file download from a blob
@@ -73,7 +70,7 @@ var fnFileSave = function(context) {
      * @author         Addam Driver <addam@devcrapshoot.com>
      * @memberOf      fnFileSave
      * <caption>Create a file to download from some text</caption>
-      * fnFileSave().createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
+      * fnFileSave.createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
      */
     , fnCreateFile = function(oData) {
         oData = oData || {};
@@ -161,7 +158,9 @@ var fnFileSave = function(context) {
     }
     ;
 
+
+    // return the create file method
     return {
         createFile : fnCreateFile
     };
-};
+}();
