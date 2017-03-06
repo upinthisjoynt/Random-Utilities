@@ -8,7 +8,7 @@
  * @author         Addam Driver <addam@devcrapshoot.com>
  * @namespace     fnFileSave
  * @example       <caption>Create a file to download from some text</caption>
- * fnFileSave.createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
+ * fileSave.createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
  */
 var fnFileSave = function(context) {
     context = context || window;
@@ -70,7 +70,7 @@ var fnFileSave = function(context) {
      * @author         Addam Driver <addam@devcrapshoot.com>
      * @memberOf      fnFileSave
      * <caption>Create a file to download from some text</caption>
-      * fnFileSave.createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
+      * fileSave.createFile({data: "this is the text for your file", filename: 'myawesomefile.csv'}); // creates a download file for the user
      */
     , fnCreateFile = function(oData) {
         oData = oData || {};
